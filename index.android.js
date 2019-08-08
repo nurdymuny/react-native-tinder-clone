@@ -6,7 +6,7 @@ TouchableOpacity.defaultProps = { activeOpacity: 0.7 };
 
 Navigation.startSingleScreenApp({
 	screen: {
-    screen: 'App'
+    	screen: 'App'
 	},
 	animationType: 'fade',
 	portraitOnlyMode: true,

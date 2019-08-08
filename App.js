@@ -46,8 +46,8 @@ export default class App extends Component {
   render() {
     return (
       <ScrollableTabView
-        prerenderingSiblingsNumber={ 2 }
-        renderTabBar={ () => <CustomTabBar /> }
+        prerenderingSiblingsNumber={2}
+        renderTabBar={() => <CustomTabBar />}
         locked
         initialPage={1}
         style={{flex: this.state.visible ? 1 : 0}}
