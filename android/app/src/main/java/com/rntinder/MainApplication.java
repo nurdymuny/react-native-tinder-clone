@@ -8,55 +8,43 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+
 import com.reactnativenavigation.NavigationApplication;
+import com.reactnativenavigation.react.NavigationReactNativeHost;
+import com.reactnativenavigation.react.ReactGateway;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MainApplication extends NavigationApplication implements ReactApplication {
+public class MainApplication extends NavigationApplication {
 
-  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
-    public boolean getUseDeveloperSupport() {
-      return BuildConfig.DEBUG;
+    protected ReactGateway createReactGateway() {
+        ReactNativeHost host = new NavigationReactNativeHost(this, isDebug(), createAdditionalReactPackages()) {
+            @Override
+            protected String getJSMainModuleName() {
+                return "index";
+            }
+        };
+        return new ReactGateway(this, isDebug(), host);
     }
 
     @Override
+    public boolean isDebug() {
+        return BuildConfig.DEBUG;
+    }
+
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
-            
-      );
+        // Add additional packages you require here
+        // No need to add RnnPackage and MainReactPackage
+        return Arrays.<ReactPackage>asList(
+            new Interactable()
+        );
     }
-
+  
     @Override
-    protected String getJSMainModuleName() {
-      return "index";
+    public List<ReactPackage> createAdditionalReactPackages() {
+        return getPackages();
     }
-  };
 
-  @Override
-  public List<ReactPackage> createAdditionalReactPackages() {
-
-    return Arrays.<ReactPackage>asList(
-      new Interactable()
-    );
-  }
-
-  @Override
-  public boolean isDebug() {
-    // Make sure you are using BuildConfig from your own application
-    return BuildConfig.DEBUG;
-  }
-
-  @Override
-  public ReactNativeHost getReactNativeHost() {
-    return mReactNativeHost;
-  }
-
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
-  }
 }
