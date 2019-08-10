@@ -14,11 +14,11 @@ import {
   ScrollView,
 } from 'react-native';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import { Home, Chat, Profile } from './src/views';
-import CustomTabBar from './src/components/custom_tab_bar';
-import { Tinder, User, Message } from './src/assets';
+import { Home, Chat, Profile } from './';
+import CustomTabBar from '../components/custom_tab_bar';
+import { Tinder, User, Message } from '../assets';
 
-export default class App extends Component {
+export default class Main extends Component {
   
   constructor(props) {
     super(props);

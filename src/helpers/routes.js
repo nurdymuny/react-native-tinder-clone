@@ -1,7 +1,8 @@
 import { Navigation } from 'react-native-navigation';
 import { View } from 'react-native';
-import App from '../../App';
 import {
+  Login,
+  Main,
   Home,
   Profile,
   Chat,
@@ -11,8 +12,11 @@ import {
 } from '../views';
 
 export const ROUTES = {
-	App: {
-		component: () => App,
+	Login: {
+		component: () => Login,
+  },
+	Main: {
+		component: () => Main,
   },
   Home: {
     component: () => Home,

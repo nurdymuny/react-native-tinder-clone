@@ -4,10 +4,20 @@ import { ROUTES } from './src/helpers/routes';
 
 TouchableOpacity.defaultProps = { activeOpacity: 0.7 };
 
-Navigation.startSingleScreenApp({
-	screen: {
-    	screen: 'App'
-	},
-	animationType: 'fade',
-	portraitOnlyMode: true,
+Navigation.events().registerAppLaunchedListener(() => {
+	// if (isLoggedIn) {}
+	Navigation.setRoot({
+		root: {
+			stack: {
+				children: [
+					{
+						component: { name: 'Login', passProps: {} }
+					},
+				],
+				options: {
+					topBar: { visible: false },
+				}
+			},
+		},
+	});
 });
