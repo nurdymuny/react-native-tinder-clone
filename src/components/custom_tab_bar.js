@@ -4,8 +4,8 @@ import {
 	StyleSheet,
 	Text,
 	TouchableOpacity,
-  ScrollView,
-  Image,
+	ScrollView,
+	Image,
 } from 'react-native';
 import { size } from '../helpers/devices';
 import * as Statics from '../helpers/statics';
@@ -14,7 +14,7 @@ let CustomScrollView = ScrollView;
 export default class CustomTabBar extends Component {
 	static propTypes = {
 		goToPage: PropTypes.func,
-		tabs: PropTypes.arrayOf(PropTypes.string),
+		tabs: PropTypes.arrayOf(PropTypes.number),
 		activeTab: PropTypes.number,
 	}
 
@@ -26,6 +26,7 @@ export default class CustomTabBar extends Component {
 
 	constructor(props) {
 		super(props);
+		console.log('CustomTabBar props = ', props);
 
 		this.scrollWidth = 0;
 		this.scrollHeight = 0;
@@ -90,8 +91,8 @@ const styles = StyleSheet.create({
 		
 	},
 	image_style: {
-    width: size(35),
-    height: size(35),
-    resizeMode: 'contain',
+		width: size(35),
+		height: size(35),
+		resizeMode: 'contain',
 	},
 });
