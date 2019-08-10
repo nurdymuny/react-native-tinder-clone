@@ -29,10 +29,6 @@ const CustomLayoutAnimation = {
 };
 
 export default class Settings extends Component {
-  static navigatorStyle = {
-		navBarHidden: true,
-  }
-
   constructor (props) {
     super(props);
     this.state = {

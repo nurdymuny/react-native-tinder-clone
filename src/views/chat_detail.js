@@ -13,10 +13,6 @@ import { size } from '../helpers/devices';
 import * as Statics from '../helpers/statics';
 
 export default class ChatDetail extends Component {
-  static navigatorStyle = {
-		navBarHidden: true,
-  }
-
   constructor(props) {
     super(props);
     this.state={

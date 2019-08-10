@@ -19,9 +19,6 @@ import CustomTabBar from './src/components/custom_tab_bar';
 import { Tinder, User, Message } from './src/assets';
 
 export default class App extends Component {
-  static navigatorStyle = {
-		navBarHidden: true,
-  }
   
   constructor(props) {
     super(props);

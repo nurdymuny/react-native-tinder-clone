@@ -13,12 +13,9 @@ Navigation.events().registerAppLaunchedListener(() => {
 					{
 						component: { name: 'App', passProps: {} }
 					},
-					{
-						component: { name: 'Settings', passProps: {} }
-					},
 				],
 				options: {
-					topBar: { title: { text: 'Welcome' } },
+					topBar: { visible: false },
 				}
 			},
 		},
