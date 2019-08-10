@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Navigation } from 'react-native-navigation';
 import {
   StyleSheet,
   View,
@@ -86,11 +87,7 @@ export default class ChatDetail extends Component {
   }
 
   popToScreen() {
-    if(Platform.OS === 'ios') {
-      this.props.navigator.pop();
-    } else {
-      this.props.navigator.dismissModal({animationType: 'slide-down'})
-    }
+    Navigation.pop();
   }
 
   render() {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Navigation } from 'react-native-navigation';
 import {
   StyleSheet,
   View,
@@ -14,27 +15,6 @@ import ProfileSwiper from '../components/profile_swiper';
 
 export default class Profile extends Component {
 
-  constructor(props) {
-    super(props);
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
-    this.state = {
-      visible: true
-    }
-  }
-
-  onNavigatorEvent(event) {
-    if (event.id === 'willAppear') {
-      this.setState({
-        visible: true
-      });
-    }
-    if (event.id === 'willDisappear') {
-      this.setState({
-        visible: false
-      });
-    }
-  }
-  
   renderProfilePicContainer() {
     return (
       <View style={styles.profile_pic_container}>
@@ -45,11 +25,7 @@ export default class Profile extends Component {
   }
 
   pushToScreen(screenName) {
-    if(Platform.OS === 'ios') {
-      this.props.navigator.push({screen: screenName})
-    } else {
-      this.props.navigator.showModal({screen: screenName ,animationType: 'slide-up'})
-    }
+    // Navigation.push(screenName, {});
   }
 
   renderNavigationContainer() {

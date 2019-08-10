@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react';
+import { Navigation } from 'react-native-navigation';
 import {
   Platform,
   StyleSheet,
@@ -24,37 +25,21 @@ export default class App extends Component {
   
   constructor(props) {
     super(props);
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
-    this.state = {
-      visible: true
-    }
-  }
-
-  onNavigatorEvent(event) {
-    if (event.id === 'willAppear') {
-      this.setState({
-        visible: true
-      });
-    }
-    if (event.id === 'willDisappear') {
-      this.setState({
-        visible: false
-      });
-    }
+    // Navigation.events().bindComponent(this);
   }
 
   render() {
     return (
       <ScrollableTabView
         prerenderingSiblingsNumber={2}
-        renderTabBar={() => <CustomTabBar />}
+        renderTabBar={(tabBarProps) => <CustomTabBar {...tabBarProps} />}
         locked
         initialPage={1}
-        style={{flex: this.state.visible ? 1 : 0}}
+        style={{flex: 1}}
       >
-        <Profile tabLabel={User} navigator={this.props.navigator} />
-        <Home tabLabel={Tinder} navigator={this.props.navigator} />
-        <Chat tabLabel={Message} navigator={this.props.navigator} />
+        <Profile tabLabel={User} />
+        <Home tabLabel={Tinder} />
+        <Chat tabLabel={Message} />
       </ScrollableTabView>
     );
   }

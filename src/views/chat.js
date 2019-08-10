@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Navigation } from 'react-native-navigation';
 import {
   StyleSheet,
   View,
@@ -39,12 +40,7 @@ export default class Chat extends Component {
   }
 
   pushToScreen(screenName, person) {
-    console.log('props', person);
-    if(Platform.OS === 'ios') {
-      this.props.navigator.push({screen: screenName, passProps: person})
-    } else {
-      this.props.navigator.showModal({screen: screenName , passProps: person, animationType: 'slide-up'})
-    }
+    // Navigation.push(screenName, {passProps: person});
   }
 
   renderSearchContainer() {
