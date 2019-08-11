@@ -15,3 +15,5 @@ export const Edit = require('./edit.png');
 export const MapIcon = require('./map.png');
 export const Key = require('./key.png');
 export const Back = require('./left-arrow.png');
+
+export const Welcome = require('./images/welcome.svg');

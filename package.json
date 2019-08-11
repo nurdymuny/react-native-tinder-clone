@@ -14,6 +14,8 @@
     "react-native-interactable": "^0.1.7",
     "react-native-navigation": "^2.26.5",
     "react-native-scrollable-tab-view": "^0.8.0",
+    "react-native-svg": "6.5.2",
+    "react-native-svg-uri": "^1.2.3",
     "react-native-swiper": "^1.5.13"
   },
   "devDependencies": {

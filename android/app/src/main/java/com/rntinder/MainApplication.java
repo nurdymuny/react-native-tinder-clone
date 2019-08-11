@@ -3,6 +3,7 @@ package com.rntinder;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.horcrux.svg.SvgPackage;
 import com.wix.interactable.Interactable;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;

@@ -42,7 +42,7 @@ export default class Settings extends Component {
     }
   }
 
-  componentWillUpdate() {
+  componentDidUpdate() {
     LayoutAnimation.configureNext(CustomLayoutAnimation);
   }
 
