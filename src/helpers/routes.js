@@ -1,6 +1,7 @@
 import { Navigation } from 'react-native-navigation';
 import { View } from 'react-native';
 import {
+  Launch,
   Login,
   Main,
   Home,
@@ -12,6 +13,9 @@ import {
 } from '../views';
 
 export const ROUTES = {
+	Launch: {
+		component: () => Launch,
+  },
 	Login: {
 		component: () => Login,
   },
