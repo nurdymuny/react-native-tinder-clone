@@ -16,6 +16,14 @@ import { Styles, Colors } from '../helpers/theme';
 
 export default class Launch extends Component {
 
+  pushLogin = () => {
+    Navigation.push('Login', {
+      component: {
+        name: 'Login',
+      }
+    })
+  }
+
   render() {
     return (
       <View style={Styles.container}>
@@ -53,7 +61,7 @@ export default class Launch extends Component {
           </View>
 
           <View style={Styles.section}>
-            <TouchableOpacity style={Styles.button}>
+            <TouchableOpacity style={Styles.button} onPress={this.pushLogin}>
               <Text style={Styles.buttonText}>Login Now</Text>
             </TouchableOpacity>
             <TouchableOpacity style={StyleSheet.flatten([Styles.button, { backgroundColor: Colors.FACEBOOK }])}>

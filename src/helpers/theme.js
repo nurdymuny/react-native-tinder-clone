@@ -31,6 +31,9 @@ export const Styles = {
         alignItems: 'center',
         marginBottom: size(24),
     },
+    sectionLast: {
+        alignItems: 'center',
+    },
     textTitle: {
         textAlign: 'center',
         fontSize: size(24),

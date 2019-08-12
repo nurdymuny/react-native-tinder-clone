@@ -11,7 +11,7 @@ Navigation.events().registerAppLaunchedListener(() => {
 			stack: {
 				children: [
 					{
-						component: { name: 'Login', passProps: {} }
+						component: { name: 'Launch', passProps: {} }
 					},
 				],
 				options: {
