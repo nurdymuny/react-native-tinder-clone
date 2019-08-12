@@ -25,7 +25,7 @@ export default class Login extends Component {
   }
 
   popLogin = () => {
-    Navigation.pop('Login');
+    Navigation.pop(this.props.componentId);
   }
 
   onChangeEmail = (email) => {

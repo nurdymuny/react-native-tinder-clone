@@ -17,7 +17,7 @@ import { Styles, Colors } from '../helpers/theme';
 export default class Launch extends Component {
 
   pushLogin = () => {
-    Navigation.push('Login', {
+    Navigation.push(this.props.componentId, {
       component: {
         name: 'Login',
       }
