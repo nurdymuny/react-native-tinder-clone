@@ -1,3 +1,4 @@
+// Original
 export const Tinder = require('./tinder.png');
 export const User = require('./user_alternative.png');
 export const Message = require('./message.png');
@@ -16,4 +17,10 @@ export const MapIcon = require('./map.png');
 export const Key = require('./key.png');
 export const Back = require('./left-arrow.png');
 
+// Images
 export const Welcome = require('./images/welcome.svg');
+
+// Icons
+export const FacebookIcon = require('./icons/facebook_icon.svg');
+export const CheckIcon = require('./icons/check_icon.svg');
+export const CheckActiveIcon = require('./icons/check_active_icon.svg');

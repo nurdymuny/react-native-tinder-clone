@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="94px" viewBox="0 0 94 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <circle id="path-1" cx="33" cy="33" r="33"></circle>
+        <filter x="-37.9%" y="-25.8%" width="175.8%" height="175.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0744735054 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search_job_page" transform="translate(-215.000000, -619.000000)">
+            <g id="Group-3" transform="translate(229.000000, 625.000000)">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="52137" transform="translate(14.400000, 16.800000)" fill="#67D321" fill-rule="nonzero">
+                    <path d="M17.6496,16.6164 C17.1024,15.4368 16.8,14.0904 16.8,12.6 C16.8,11.1096 17.1024,9.6132 17.6496,8.2092 C18.1956,6.804 18.9864,5.49 19.9644,4.3632 C20.9412,3.2376 22.1052,2.2956 23.3964,1.638 C24.6888,0.9768 26.1096,0.6 27.6,0.6 C29.0904,0.6 30.5112,0.9024 31.8036,1.4484 C33.096,1.9956 34.2588,2.7864 35.2356,3.7632 C36.2112,4.74 37.0044,5.904 37.5504,7.1964 C38.0988,8.4876 38.4,9.9096 38.4,11.4 C38.4,12.8904 38.0976,14.3124 37.5504,15.6036 C37.0044,16.896 36.2136,18.06 35.2356,19.0368 C34.26,20.0136 20.4924,32.4528 19.2,33 L19.2,33 L19.2,33 C17.9076,32.4528 4.14,20.0136 3.1632,19.0368 C2.1864,18.06 1.3956,16.896 0.8484,15.6036 C0.3024,14.3124 0,12.8904 0,11.4 C0,9.9096 0.3024,8.4876 0.8484,7.1964 C1.3956,5.904 2.1852,4.74 3.1632,3.7632 C4.14,2.7864 5.304,1.9956 6.5964,1.4484 C7.8876,0.9024 9.3084,0.6 10.8,0.6 C12.2916,0.6 13.7124,0.9768 15.0036,1.6356 C16.296,2.2956 17.4588,3.2364 18.4368,4.362 C19.4136,5.4888 20.2044,6.8028 20.7516,8.208 C21.2976,9.6132 21.6,11.1096 21.6,12.6 C21.6,14.0904 21.2976,15.4368 20.7516,16.6164 C20.2044,17.796 19.416,18.81 18.4368,19.638" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
