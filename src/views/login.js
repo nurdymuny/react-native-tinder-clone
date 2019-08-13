@@ -12,7 +12,7 @@ import SvgUri from 'react-native-svg-uri';
 import CheckBox from 'react-native-check-box';
 
 import { setRootMainTabs } from '../helpers/routes';
-import { CheckIcon, CheckActiveIcon } from '../assets';
+import { svgCheckIcon, svgCheckActiveIcon } from '../assets';
 import { size } from '../helpers/devices';
 import { Styles, Colors } from '../helpers/theme';
 import { Collapsable, Header } from '../components';
@@ -63,7 +63,7 @@ export default class Login extends Component {
               <Text style={Styles.inputLabel}>Email address</Text>
               <View style={Styles.inputContainer}>
                 <TextInput style={Styles.input} keyboardType="email-address" autoFocus={true} maxLength={64} value={email} onChangeText={this.onChangeEmail} placeholder="john.smith@gmail.com" underlineColorAndroid={Colors.BLACK} />
-                <SvgUri width={Styles.inputIconSize} height={Styles.inputIconSize} source={CheckActiveIcon} />
+                <SvgUri width={Styles.inputIconSize} height={Styles.inputIconSize} source={svgCheckActiveIcon} />
               </View>
             </View>
 
@@ -78,8 +78,8 @@ export default class Login extends Component {
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <CheckBox
                   isChecked={remember} onClick={this.onChangeRemember}
-                  checkedImage={<SvgUri width={Styles.inputIconSize} height={Styles.inputIconSize} source={CheckActiveIcon} />}
-                  unCheckedImage={<SvgUri width={Styles.inputIconSize} height={Styles.inputIconSize} source={CheckIcon} />}
+                  checkedImage={<SvgUri width={Styles.inputIconSize} height={Styles.inputIconSize} source={svgCheckActiveIcon} />}
+                  unCheckedImage={<SvgUri width={Styles.inputIconSize} height={Styles.inputIconSize} source={svgCheckIcon} />}
                 />
                 <TouchableOpacity style={Styles.buttonLink} onPress={this.onChangeRemember}>
                   <Text style={StyleSheet.flatten([Styles.textNormal, { paddingLeft: size(5) }])}>Remember Me</Text>

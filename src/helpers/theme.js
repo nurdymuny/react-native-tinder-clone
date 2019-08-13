@@ -12,6 +12,8 @@ export const Colors = {
     SHADOW          : '#dddddd',
     BORDER          : '#dddddd',
     FACEBOOK        : '#5055B1',
+    ACTIVE_TAB      : '#545493',
+    INACTIVE_TAB    : '#D8D9EA',
 }
 
 export const Styles = {

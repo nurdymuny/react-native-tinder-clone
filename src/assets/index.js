@@ -17,11 +17,19 @@ export const MapIcon = require('./map.png');
 export const Key = require('./key.png');
 export const Back = require('./left-arrow.png');
 
-// Images
-export const svgWelcome = require('./images/welcome.svg');
+/**
+ * Icons
+ */
 
-// Icons
+// Launch and Login screen
+export const svgWelcome = require('./images/welcome.svg');
 export const svgFacebookIcon = require('./icons/facebook_icon.svg');
 export const svgCheckIcon = require('./icons/check_icon.svg');
 export const svgCheckActiveIcon = require('./icons/check_active_icon.svg');
-export const svgSearchIcon = require('./icons/search_icon.svg');
+// MainTabs Icons
+export const AccountIcon = require('./icons/account_icon.png');
+export const SearchIcon = require('./icons/search_icon.png');
+export const MessageIcon = require('./icons/message_icon.png');
+// bottomTab Icons
+export const svgRejectIcon = require('./icons/reject_icon.svg');
+export const svgLovedIcon = require('./icons/loved_icon.svg');

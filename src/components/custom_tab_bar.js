@@ -7,7 +7,10 @@ import {
 	ScrollView,
 	Image,
 } from 'react-native';
+import SvgUri from 'react-native-svg-uri';
+
 import { size } from '../helpers/devices';
+import { Colors } from '../helpers/theme';
 import * as Statics from '../helpers/statics';
 let CustomScrollView = ScrollView;
 
@@ -15,7 +18,7 @@ export default class CustomTabBar extends Component {
 	static propTypes = {
 		goToPage: PropTypes.func,
 		tabs: PropTypes.arrayOf(PropTypes.number),
-		activeTab: PropTypes.number,
+		activeTab: PropTypes.number,				// by zero based index
 	}
 
 	static defaultProps = {
@@ -26,7 +29,6 @@ export default class CustomTabBar extends Component {
 
 	constructor(props) {
 		super(props);
-		console.log('CustomTabBar props = ', props);
 
 		this.scrollWidth = 0;
 		this.scrollHeight = 0;
@@ -55,12 +57,13 @@ export default class CustomTabBar extends Component {
 					this.scrollHeight = contentHeight;
 				} }
 			>
-				{ this.props.tabs.map((tab, i) => {
-					const activeTab = this.props.activeTab === i ? { tintColor: 'rgb(253,77,55)' } : { tintColor: 'rgb(209,215,223)'};
+				{this.props.tabs.map((tab, i) => {
+					const activeTab = this.props.activeTab === i ? { tintColor: Colors.ACTIVE_TAB } : { tintColor: Colors.INACTIVE_TAB };
 					return (
 						<TouchableOpacity key={ tab } onPress={ () => this.tabPressed(i) } style={ [styles.tab] }>
 							<Image style={ [styles.image_style, activeTab] } source={tab} />
-						</TouchableOpacity>);
+						</TouchableOpacity>
+					);
 				})}
 			</ScrollView>
 		);

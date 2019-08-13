@@ -10,7 +10,7 @@ import {
 import SvgUri from 'react-native-svg-uri';
 import Swiper from 'react-native-swiper';
 
-import { Welcome, FacebookIcon } from '../assets';
+import { svgWelcome, svgFacebookIcon } from '../assets';
 import { size } from '../helpers/devices';
 import { Styles, Colors } from '../helpers/theme';
 
@@ -40,7 +40,7 @@ export default class Launch extends Component {
             <Swiper autoplay={true} autoplayTimeout={2} style={{ height: size(390) }}>
               <View>
                 <View style={Styles.section}>
-                  <SvgUri width={size(202)} height={size(162)} source={Welcome} />
+                  <SvgUri width={size(202)} height={size(162)} source={svgWelcome} />
                 </View>
                 <View style={Styles.section}>
                   <Text numberOfLines={2} style={Styles.textTitle}>Misdemeanor And Felony-Friendly Jobs</Text>
@@ -49,7 +49,7 @@ export default class Launch extends Component {
               </View>
               <View>
                 <View style={Styles.section}>
-                  <SvgUri width={size(202)} height={size(162)} source={Welcome} />
+                  <SvgUri width={size(202)} height={size(162)} source={svgWelcome} />
                 </View>
                 <View style={Styles.section}>
                   <Text numberOfLines={2} style={Styles.textTitle}>Misdemeanor And Felony-Friendly Jobs</Text>
@@ -58,7 +58,7 @@ export default class Launch extends Component {
               </View>
               <View>
                 <View style={Styles.section}>
-                  <SvgUri width={size(202)} height={size(162)} source={Welcome} />
+                  <SvgUri width={size(202)} height={size(162)} source={svgWelcome} />
                 </View>
                 <View style={Styles.section}>
                   <Text numberOfLines={2} style={Styles.textTitle}>Misdemeanor And Felony-Friendly Jobs</Text>
@@ -73,7 +73,7 @@ export default class Launch extends Component {
               <Text style={Styles.buttonText}>Login Now</Text>
             </TouchableOpacity>
             <TouchableOpacity style={StyleSheet.flatten([Styles.button, { backgroundColor: Colors.FACEBOOK }])} onPress={this.pushFacebookLogin}>
-              <View style={Styles.buttonIcon}><SvgUri width={Styles.buttonIconSize} height={Styles.buttonIconSize} source={FacebookIcon} /></View>
+              <View style={Styles.buttonIcon}><SvgUri width={Styles.buttonIconSize} height={Styles.buttonIconSize} source={svgFacebookIcon} /></View>
               <Text style={Styles.buttonText}>Continue with Facebook</Text>
             </TouchableOpacity>
             <TouchableOpacity style={Styles.buttonLink}>
