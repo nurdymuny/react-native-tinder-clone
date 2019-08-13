@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import {
   Launch,
   Login,
+  MainTabs,
   Main,
   Home,
   Profile,
@@ -12,12 +13,15 @@ import {
   ChatDetail,
 } from '../views';
 
-export const ROUTES = {
+const ROUTES = {
 	Launch: {
 		component: () => Launch,
   },
 	Login: {
 		component: () => Login,
+  },
+  MainTabs: {
+    component: () => MainTabs,
   },
 	Main: {
 		component: () => Main,
@@ -47,3 +51,37 @@ Object.keys(ROUTES).forEach((routeName) => {
 	Navigation.registerComponent(routeName, ROUTES[routeName].component);
   console.log(`Registered route: ${routeName}`);
 });
+
+export const setRootLaunch = () => {
+  Navigation.setRoot({
+		root: {
+			stack: {
+				children: [
+					{
+						component: { name: 'Launch', passProps: {} }
+					},
+				],
+				options: {
+					topBar: { visible: false },
+				}
+			},
+		},
+	});
+}
+
+export const setRootMainTabs = () => {
+  Navigation.setRoot({
+		root: {
+			stack: {
+				children: [
+					{
+						component: { name: 'MainTabs', passProps: {} }
+					},
+				],
+				options: {
+					topBar: { visible: false },
+				}
+			},
+		},
+	});
+}

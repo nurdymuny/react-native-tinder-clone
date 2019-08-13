@@ -1,5 +1,7 @@
-export { default as Launch } from './launch';
-export { default as Login } from './login';
+export { default as Launch } from './Launch';
+export { default as Login } from './Login';
+export { default as MainTabs } from './MainTabs';
+
 export { default as Main } from './main';
 
 export { default as Home } from './home';

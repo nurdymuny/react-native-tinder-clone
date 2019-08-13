@@ -24,6 +24,14 @@ export default class Launch extends Component {
     })
   }
 
+  pushFacebookLogin = () => {
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: 'Main',
+      }
+    })
+  }
+
   render() {
     return (
       <View style={Styles.container}>
@@ -64,7 +72,7 @@ export default class Launch extends Component {
             <TouchableOpacity style={Styles.button} onPress={this.pushLogin}>
               <Text style={Styles.buttonText}>Login Now</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={StyleSheet.flatten([Styles.button, { backgroundColor: Colors.FACEBOOK }])}>
+            <TouchableOpacity style={StyleSheet.flatten([Styles.button, { backgroundColor: Colors.FACEBOOK }])} onPress={this.pushFacebookLogin}>
               <View style={Styles.buttonIcon}><SvgUri width={Styles.buttonIconSize} height={Styles.buttonIconSize} source={FacebookIcon} /></View>
               <Text style={Styles.buttonText}>Continue with Facebook</Text>
             </TouchableOpacity>

@@ -11,6 +11,7 @@ import {
 import SvgUri from 'react-native-svg-uri';
 import CheckBox from 'react-native-check-box';
 
+import { setRootMainTabs } from '../helpers/routes';
 import { CheckIcon, CheckActiveIcon } from '../assets';
 import { size } from '../helpers/devices';
 import { Styles, Colors } from '../helpers/theme';
@@ -20,7 +21,6 @@ export default class Login extends Component {
   
   constructor(props) {
     super(props);
-
     this.state = { email: '', password: '', remember: false }
   }
 
@@ -91,7 +91,7 @@ export default class Login extends Component {
             </View>
 
             <View style={Styles.section}>
-              <TouchableOpacity style={Styles.button}>
+              <TouchableOpacity style={Styles.button} onPress={setRootMainTabs}>
                 <Text style={Styles.buttonText}>Get Login</Text>
               </TouchableOpacity>
               <TouchableOpacity style={StyleSheet.flatten([Styles.button, { backgroundColor: Colors.WHITE }])}>
