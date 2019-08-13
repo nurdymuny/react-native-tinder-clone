@@ -18,9 +18,10 @@ export const Key = require('./key.png');
 export const Back = require('./left-arrow.png');
 
 // Images
-export const Welcome = require('./images/welcome.svg');
+export const svgWelcome = require('./images/welcome.svg');
 
 // Icons
-export const FacebookIcon = require('./icons/facebook_icon.svg');
-export const CheckIcon = require('./icons/check_icon.svg');
-export const CheckActiveIcon = require('./icons/check_active_icon.svg');
+export const svgFacebookIcon = require('./icons/facebook_icon.svg');
+export const svgCheckIcon = require('./icons/check_icon.svg');
+export const svgCheckActiveIcon = require('./icons/check_active_icon.svg');
+export const svgSearchIcon = require('./icons/search_icon.svg');
