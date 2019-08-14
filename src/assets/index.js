@@ -33,3 +33,18 @@ export const MessageIcon = require('./icons/message_icon.png');
 // bottomTab Icons
 export const svgRejectIcon = require('./icons/reject_icon.svg');
 export const svgLovedIcon = require('./icons/loved_icon.svg');
+// Card Icons
+export const svgCollapseIcon = require('./icons/collapse_icon.svg');
+export const svgExpandIcon = require('./icons/expand_icon.svg');
+export const svgInfoIcon = require('./icons/info_icon.svg');
+export const svgInfoSmallIcon = require('./icons/info_small_icon.svg');
+export const svgLocationIcon = require('./icons/location_icon.svg');
+export const svgLocationSmallIcon = require('./icons/location_small_icon.svg');
+export const svgRateIcon = require('./icons/rate_icon.svg');
+export const svgRefreshIcon = require('./icons/refresh_icon.svg');
+export const svgWorkTypeIcon = require('./icons/work_type_icon.svg');
+// Card Images
+export const Logo1 = require('./images/adidas-logo.png');
+export const Logo2 = require('./images/mod-logo.png');
+export const Logo3 = require('./images/perdue-logo.png');
+export const Logo4 = require('./images/virgin-logo.png');

@@ -3,60 +3,68 @@ import {
   StyleSheet,
   View,
   Text,
-  ImageBackground,
+  Image,
 } from 'react-native';
+import SvgUri from 'react-native-svg-uri';
+
 import { size } from '../helpers/devices';
-import * as Statics from '../helpers/statics';
-import { BackgroundLayer } from '../assets';
+import { svgWorkTypeIcon, svgLocationIcon, svgRateIcon, svgInfoIcon } from '../assets';
+import { Styles, Colors } from '../helpers/theme';
 
 export default class TinderCard extends Component {
   render() {
-    const { url, name, age, school } = this.props;
+    const { logo, title, subtitle, hours, location, rate, summary } = this.props;
 
     return (
-      <View style={styles.container}>
-        <ImageBackground
-          source={{ uri: url}} 
-          style={styles.news_image_style} 
-        >
-          <ImageBackground 
-            style={styles.name_info_container}
-            source={BackgroundLayer}
-          >
-            <Text style={styles.name_style}>{name}, {age}</Text>
-            <Text style={styles.school_style}>{school}</Text>
-          </ImageBackground>
-        </ImageBackground>
+      <View style={Styles.cardContainer}>
+        <View style={Styles.cardHeader}>
+          <Image style={styles.headerImage} source={logo} />
+          <Text style={StyleSheet.flatten([Styles.textTitle, { marginBottom: size(10) }])}>{title}</Text>
+          <Text style={StyleSheet.flatten([Styles.textNormal, { marginBottom: size(14) }])}>{subtitle}</Text>
+        </View>
+        <View style={Styles.cardBody}>
+          <View style={styles.bodyItem}>
+            <View style={styles.bodyIcon}><SvgUri width={size(26)} height={size(26)} source={svgWorkTypeIcon} /></View>
+            <Text style={Styles.textSmall}>{hours}</Text>
+          </View>
+          <View style={styles.bodyItem}>
+            <View style={styles.bodyIcon}><SvgUri width={size(26)} height={size(26)} source={svgLocationIcon} /></View>
+            <Text style={Styles.textSmall}>{location}</Text>
+          </View>
+          <View style={styles.bodyItem}>
+            <View style={styles.bodyIcon}><SvgUri width={size(26)} height={size(26)} source={svgRateIcon} /></View>
+            <Text style={Styles.textSmall}>${rate} /hour</Text>
+          </View>
+        </View>
+        <View style={Styles.cardFooter}>
+          <View style={styles.footerTitle}>
+            <Text style={StyleSheet.flatten([Styles.textNormal, { color: Colors.GRAY_TEXT }])}>SUMMARY</Text>
+            <SvgUri width={size(40)} height={size(40)} source={svgInfoIcon} />
+          </View>
+          <Text style={Styles.textNormal} numberOfLines={3}>{summary}</Text>
+        </View>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  news_image_style: {
-    width: Statics.DEVICE_WIDTH - size(25),
-    height: size(550), // FIX ME ITS BAD
-    flexDirection: 'column',
-    justifyContent: 'flex-end',
-    marginHorizontal: size(10),
-    marginTop: size(10),
-    borderRadius: 15,
-    overflow: 'hidden'
+const styles = {
+  headerImage: {
+    width: size(150),
+    height: size(100),
+    resizeMode: 'contain',
+    marginVertical: size(10),
   },
-  name_info_container: {
-    padding: size(20),
+  bodyItem: {
+    alignItems: 'center',
   },
-  name_style: {
-    fontSize: size(24),
-    fontWeight: '700',
-    color: 'white',
-    marginBottom: size(5),
-    backgroundColor: 'transparent',
+  bodyIcon: {
+    marginBottom: size(6),
   },
-  school_style: {
-    fontSize: size(18),
-    fontWeight: '400',
-    color: 'white',
-    backgroundColor: 'transparent',
+  footerTitle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingBottom: size(10),
   },
-});
+}
