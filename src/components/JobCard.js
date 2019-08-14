@@ -60,7 +60,9 @@ export default class JobCard extends Component {
             </View>
           ) : (
             <ScrollView>
-              
+              <View style={{ height: 250 }}>
+                <Text>Comming soon...</Text>
+              </View>
             </ScrollView>
           )}
         </View>
