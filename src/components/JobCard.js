@@ -11,7 +11,7 @@ import { size } from '../helpers/devices';
 import { svgWorkTypeIcon, svgLocationIcon, svgRateIcon, svgInfoIcon } from '../assets';
 import { Styles, Colors } from '../helpers/theme';
 
-export default class TinderCard extends Component {
+export default class JobCard extends Component {
   render() {
     const { logo, title, subtitle, hours, location, rate, summary } = this.props;
 

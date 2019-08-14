@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import Deck from '../components/deck';
-import TinderCard from '../components/tinder_card';
+import JobCard from '../components/JobCard';
 import NoMoreCard from '../components/no_more_card';
 import { Styles } from '../helpers/theme';
 import { Logo1, Logo2, Logo3, Logo4 } from '../assets';
@@ -34,7 +34,7 @@ export default class Home extends Component {
 
   renderCard = (item) => {
     return (
-      <TinderCard
+      <JobCard
         key={item.id}
         logo={item.logo}
         title={item.title}
