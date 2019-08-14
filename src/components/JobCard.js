@@ -4,16 +4,29 @@ import {
   View,
   Text,
   Image,
+  TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import SvgUri from 'react-native-svg-uri';
+import Accordion from 'react-native-collapsible/Accordion';
 
 import { size } from '../helpers/devices';
 import { svgWorkTypeIcon, svgLocationIcon, svgRateIcon, svgInfoIcon } from '../assets';
 import { Styles, Colors } from '../helpers/theme';
 
 export default class JobCard extends Component {
+
+  state = {
+    isSummaryOrDetail: true,
+  }
+
+  onPressInfo = () => {
+    this.setState({ isSummaryOrDetail: !this.state.isSummaryOrDetail });
+  }
+
   render() {
-    const { logo, title, subtitle, hours, location, rate, summary } = this.props;
+    const { logo, title, subtitle, hours, location, rate, summary, duties = [], qualifications = [], details = [] } = this.props;
+    const { isSummaryOrDetail } = this.state;
 
     return (
       <View style={Styles.cardContainer}>
@@ -37,11 +50,19 @@ export default class JobCard extends Component {
           </View>
         </View>
         <View style={Styles.cardFooter}>
-          <View style={styles.footerTitle}>
-            <Text style={StyleSheet.flatten([Styles.textNormal, { color: Colors.GRAY_TEXT }])}>SUMMARY</Text>
-            <SvgUri width={size(40)} height={size(40)} source={svgInfoIcon} />
-          </View>
-          <Text style={Styles.textNormal} numberOfLines={3}>{summary}</Text>
+          {isSummaryOrDetail ? (
+            <View>
+              <View style={styles.footerTitle}>
+                <Text style={StyleSheet.flatten([Styles.textNormal, { color: Colors.GRAY_TEXT }])}>SUMMARY</Text>
+                <TouchableOpacity onPress={this.onPressInfo}><SvgUri width={size(40)} height={size(40)} source={svgInfoIcon} /></TouchableOpacity>
+              </View>
+              <Text style={Styles.textNormal} numberOfLines={3}>{summary}</Text>
+            </View>
+          ) : (
+            <ScrollView>
+              
+            </ScrollView>
+          )}
         </View>
       </View>
     );

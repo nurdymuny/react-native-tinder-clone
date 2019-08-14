@@ -5,7 +5,7 @@ import {
   Login,
   MainTabs,
   Main,
-  Home,
+  JobSearch,
   Profile,
   Chat,
   Settings,
@@ -26,8 +26,8 @@ const ROUTES = {
 	Main: {
 		component: () => Main,
   },
-  Home: {
-    component: () => Home,
+  JobSearch: {
+    component: () => JobSearch,
   },
   Chat: {
     component: () => Chat,

@@ -14,7 +14,7 @@ import {
   ScrollView,
 } from 'react-native';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import { Home, Chat, Profile } from './';
+import { JobSearch, Chat, Profile } from './';
 import CustomTabBar from '../components/custom_tab_bar';
 import { Tinder, User, Message } from '../assets';
 
@@ -35,7 +35,7 @@ export default class Main extends Component {
         style={{flex: 1}}
       >
         <Profile tabLabel={User} />
-        <Home tabLabel={Tinder} />
+        <JobSearch tabLabel={Tinder} />
         <Chat tabLabel={Message} />
       </ScrollableTabView>
     );

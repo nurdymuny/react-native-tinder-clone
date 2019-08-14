@@ -14,7 +14,7 @@ import {
   ScrollView,
 } from 'react-native';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import { Home, Chat, Profile } from './';
+import { JobSearch, Chat, Profile } from './';
 import CustomTabBar from '../components/custom_tab_bar';
 import { AccountIcon, SearchIcon, MessageIcon } from '../assets';
 
@@ -35,7 +35,7 @@ export default class MainTabs extends Component {
         style={{flex: 1}}
       >
         <Profile tabLabel={AccountIcon} />
-        <Home tabLabel={SearchIcon} />
+        <JobSearch tabLabel={SearchIcon} />
         <Chat tabLabel={MessageIcon} />
       </ScrollableTabView>
     );

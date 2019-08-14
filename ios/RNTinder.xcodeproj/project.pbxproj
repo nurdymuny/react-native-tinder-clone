@@ -40,6 +40,7 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		CD2C88FC23007A980044C949 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2C88FB230077640044C949 /* libRNSVG-tvOS.a */; };
 		CD3E6FD2B97D4023B8EBD002 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC7254A2F3440ADB8B772AD /* libRNSVG.a */; };
+		CDD67CC52303B6A20046B094 /* libRCTBlob-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E57B74520122AB000DE6F73 /* libRCTBlob-tvOS.a */; };
 		CDF9E95E22FE460800AEBDF0 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF9E95B22FE45D300AEBDF0 /* libReactNativeNavigation.a */; };
 /* End PBXBuildFile section */
 
@@ -410,6 +411,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD67CC52303B6A20046B094 /* libRCTBlob-tvOS.a in Frameworks */,
 				CD2C88FC23007A980044C949 /* libRNSVG-tvOS.a in Frameworks */,
 				2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */,
 				2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */,

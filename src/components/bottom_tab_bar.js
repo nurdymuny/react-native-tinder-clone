@@ -29,7 +29,7 @@ export default class BottomTabBar extends Component {
   }
 
   componentWillReceiveProps(props) {
-    console.log('PRops', props);
+    console.log('BottomTabBar props = ', props);
   }
 
   scaleButton() {
@@ -162,29 +162,14 @@ export default class BottomTabBar extends Component {
     const disableStyle = this.props.isDone ? {tintColor: 'rgb(209,215,223)'} : {}; 
     return (
       <View style={styles.container}>
-        <TouchableWithoutFeedback onPress={this.onRewindPress} disabled={this.props.isDone}>
-          <Animated.View style={[styles.button_container, this.getCardStyle1()]}>
-            <Image source={Rewind} style={[styles.small_icon, {tintColor: 'rgb(250,177,11)'}, disableStyle]}/>
-          </Animated.View>
-        </TouchableWithoutFeedback>
         <TouchableWithoutFeedback onPress={this.onDislikePress}>
           <Animated.View style={[styles.button_container, this.getCardStyle2()]}>
             <Image source={Dislike} style={styles.large_icon}/>
           </Animated.View>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={this.onSuperLikePress}>
-          <Animated.View style={[styles.button_container, this.getCardStyle3()]}>
-            <Image source={SuperLike} style={styles.small_icon}/>
-          </Animated.View>
-        </TouchableWithoutFeedback>
         <TouchableWithoutFeedback onPress={this.onLikePress}>
           <Animated.View style={[styles.button_container, this.getCardStyle4()]}>
               <Image source={Like} style={styles.large_icon}/>
-          </Animated.View>
-        </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={this.onBoostPress}>
-          <Animated.View style={[styles.button_container, this.getCardStyle5()]}>
-            <Image source={Boost} style={styles.small_icon}/> 
           </Animated.View>
         </TouchableWithoutFeedback>
       </View>
