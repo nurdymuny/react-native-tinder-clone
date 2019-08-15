@@ -53,11 +53,16 @@ export default class JobCard extends Component {
   };
   renderContent = (section) => {
     if (Array.isArray(section.content)) {
-      return section.content.map((_content, _c) => (
-        <View style={styles.collapsibleListContent}>
-          <Text key={_c} style={StyleSheet.flatten([Styles.textNormal, { color: Colors.WHITE }])}>{_content}</Text>
+      return (
+        <View style={styles.collapsibleContent}>
+          {section.content.map((_content, _c) => (
+            <View key={_c} style={styles.checkListItem}>
+              <Image style={StyleSheet.flatten([styles.collapsibleImage, { marginTop: size(2) }])} source={CheckListIcon} />
+              <Text style={StyleSheet.flatten([Styles.textNormal, { color: Colors.WHITE, textAlign: 'left', paddingLeft: size(10) }])}>{_content}</Text>
+            </View>
+          ))}
         </View>
-      ))
+      )
     }
     return (
       <View style={styles.collapsibleContent}>
@@ -159,7 +164,7 @@ const styles = {
     padding: size(25),
     paddingTop: 0
   },
-  collapsibleListContent: {
-
+  checkListItem: {
+    flexDirection: 'row',
   }
 }
