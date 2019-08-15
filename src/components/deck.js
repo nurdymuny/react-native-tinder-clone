@@ -134,6 +134,7 @@ export default class Deck2 extends Component {
                 }]
               }]}>
                   
+                  {/*
                   <Animated.View style={[styles.overlay_nope, {
                     opacity: this.state.position.interpolate({
                       inputRange: [-120, 0],
@@ -155,6 +156,7 @@ export default class Deck2 extends Component {
                   }]}>
                     <Text style={[styles.overlayText, {color: '#2f9a5d'}]}>Keep</Text>
                   </Animated.View>
+                  */}
                   {this.props.renderCard(item)}
               </Animated.View>
             </Interactable.View>
